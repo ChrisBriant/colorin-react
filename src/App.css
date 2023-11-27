@@ -37,9 +37,6 @@ button:hover {
   margin: auto;
 }
 
-/* .exit-button.overlay {
-  display: block;
-} */
 
 /* alignment  */
 
@@ -319,65 +316,6 @@ footer {
 .palette .color-block:nth-child(24) {
   background-color: #fff; /* Light Green */
 }
-
-
-/* .palette .color-block:nth-child(1){
-  background-color: red;
-}
-
-.palette .color-block:nth-child(2){
-  background-color: yellow;
-}
-.palette .color-block:nth-child(3){
-  background-color: pink;
-}
-.palette .color-block:nth-child(4){
-  background-color: magenta;
-}
-.palette .color-block:nth-child(5){
-  background-color: green;
-} */
-
-/* ROW 2  */
-
-/* .palette .color-block:nth-child(6){
-  background-color: greenyellow;
-}
-
-.palette .color-block:nth-child(7){
-  background-color: blue;
-}
-.palette .color-block:nth-child(8){
-  background-color: blueviolet;
-}
-.palette .color-block:nth-child(9){
-  background-color: black;
-}
-.palette .color-block:nth-child(10){
-  background-color: white;
-} */
-
-/* ROW 3 */
-/* .palette .color-block:nth-child(11){
-  background-color: #8B4513;
-}
-
-.palette .color-block:nth-child(12){
-  background-color: #8B4513;
-}
-
-.palette .color-block:nth-child(13){
-  background-color: #8B4513;
-}
-
-.palette .color-block:nth-child(14){
-  background-color: #8B4513;
-}
-
-.palette .color-block:nth-child(15){
-  background-color: #8B4513;
-} */
-
 
 
 /* MEDIA  */

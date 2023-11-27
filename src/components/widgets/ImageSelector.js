@@ -7,12 +7,6 @@ const ImageSelector = (props) => {
 
     //Remove the overlay if it there
     closeDialog();
-    // const overlayComponents = document.querySelectorAll('.overlay');
-    // console.log('Overlay componentns', overlayComponents);
-    // overlayComponents.forEach((component) => {
-    //   console.log('COMPONENT', component);
-    //   component.classList.remove('overlay');
-    // });
   }
   
   const closeDialog = () => {

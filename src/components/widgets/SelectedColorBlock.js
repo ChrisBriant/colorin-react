@@ -1,5 +1,4 @@
 const SelectedColorBlock = (props) => {
-  //const colorStyle = `background-color:${props.color};`;
   const colorStyle = { backgroundColor: props.color };
 
   console.log(colorStyle);

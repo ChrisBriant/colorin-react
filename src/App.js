@@ -1,6 +1,5 @@
 import './App.css';
-import { useState } from 'react';
-//import Rose from './assets/svg/rose.svg';
+import { useState } from 'react';;
 import { ReactComponent as MySvg } from './assets/svg/rose.svg';
 import { ReactComponent as Shark } from './assets/svg/shark.svg';
 import { ReactComponent as AlbumIcon } from './assets/svg/album-icon.svg';
@@ -14,21 +13,11 @@ const handlePath = (e,selectedColor) => {
   e.target.setAttribute('fill', selectedColor);
 }
 
-// const coloringImages = [
-//   { image: Shark, jsx: <Shark className="color-in-image" onClick={(e) => handlePath(e,selectedColor)}/>},
-//   { image: MySvg, jsx: <Shark className="color-in-image" onClick={(e) => handlePath(e,selectedColor)}/>}
-// ];
-
 
 const coloringImages = [
   Shark,
   MySvg
 ];
-
-// getSelectedImage = (idx, setSelectedColor) => {
-//   const SelectedImageComponent = coloringImages[idx];
-//   return <SelectedImageComponent className="color-in-image" onClick={(e) => handlePath(e,selectedColor)} />;
-// }
 
 const setOverlay = () => {
   const page = document.querySelector('.App');
@@ -64,8 +53,6 @@ function App() {
               <ImageSelector images={coloringImages} setSelectedImage={setSelectedImageComponent} />
             </div>
           </div>
-
-          {/* <Shark className="color-in-image" onClick={(e) => handlePath(e,selectedColor)}/> */}
         </main>
         <footer>
           <p>By Chris Briant, &copy; {new Date().getFullYear() }</p>

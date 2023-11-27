@@ -1,24 +1,76 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+//import Rose from './assets/svg/rose.svg';
+import { ReactComponent as MySvg } from './assets/svg/rose.svg';
+import { ReactComponent as Shark } from './assets/svg/shark.svg';
+import { ReactComponent as AlbumIcon } from './assets/svg/album-icon.svg';
+import Palette from './components/widgets/Palette';
+import SelectedColorBlock from './components/widgets/SelectedColorBlock';
+import ImageSelector from './components/widgets/ImageSelector';
+
+const handlePath = (e,selectedColor) => {
+  console.log('clicked', e.target);
+  e.target.setAttribute('style', '');
+  e.target.setAttribute('fill', selectedColor);
+}
+
+// const coloringImages = [
+//   { image: Shark, jsx: <Shark className="color-in-image" onClick={(e) => handlePath(e,selectedColor)}/>},
+//   { image: MySvg, jsx: <Shark className="color-in-image" onClick={(e) => handlePath(e,selectedColor)}/>}
+// ];
+
+
+const coloringImages = [
+  Shark,
+  MySvg
+];
+
+// getSelectedImage = (idx, setSelectedColor) => {
+//   const SelectedImageComponent = coloringImages[idx];
+//   return <SelectedImageComponent className="color-in-image" onClick={(e) => handlePath(e,selectedColor)} />;
+// }
+
+const setOverlay = () => {
+  const page = document.querySelector('.App');
+  const alubumOverlay = document.querySelector('.image-selector-panel-container');
+  page.classList.add('overlay');
+  alubumOverlay.classList.add('overlay');
+}
 
 function App() {
+  const [selectedColor, setSelectedColor] = useState('#000');
+  const [SelectedImageComponent, setSelectedImageComponent] = useState(coloringImages[1]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className='App'>
+        <header>
+          <h1>Color In Book</h1>
+        </header>
+        <main>
+          <div className='palette-bar'>
+            <div className='album-icon-container' onClick={() => setOverlay()}>
+              <AlbumIcon id="album-icon" />
+            </div>
+            <div className="palette-container">
+              <Palette setSelectedColor={setSelectedColor} />
+              <SelectedColorBlock color={selectedColor} />
+            </div>
+          </div>
+          <div className='body-section'>
+            <div className='color-in-area'>
+              <SelectedImageComponent className="color-in-image" onClick={(e) => handlePath(e,selectedColor)}/> 
+            </div>
+            <div className='image-selector-panel-container'>
+              <ImageSelector images={coloringImages} setSelectedImage={setSelectedImageComponent} />
+            </div>
+          </div>
+
+          {/* <Shark className="color-in-image" onClick={(e) => handlePath(e,selectedColor)}/> */}
+        </main>
+        <footer>
+          <p>By Chris Briant, &copy; {new Date().getFullYear() }</p>
+        </footer>
+      </div>
   );
 }
 

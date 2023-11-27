@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';;
+import { useState } from 'react';
 import { ReactComponent as MySvg } from './assets/svg/rose.svg';
 import { ReactComponent as Shark } from './assets/svg/shark.svg';
 import { ReactComponent as AlbumIcon } from './assets/svg/album-icon.svg';
